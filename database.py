@@ -12,7 +12,7 @@ class Model(DeclarativeBase):
 
 
 class TaskOrm(Model):
-    __tablename__ = "Tasks"
+    __tablename__ = "tasks"
 
     id: Mapped[int] = mapped_column(primary_key=True)
     name: Mapped[str]

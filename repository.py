@@ -11,8 +11,8 @@ class TaskRepository:
 
             task = TaskOrm(**task_dict)
             session.add(task)
-            await session.flush()
             await session.commit()
+            await session.refresh(task)
             return task.id
 
     @classmethod
